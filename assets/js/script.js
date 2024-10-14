@@ -136,23 +136,20 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 // contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const form = document.getElementById('contact-form');
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// Add event listener for form submission
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting the default way
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
+  // Send form data using EmailJS
+  emailjs.sendForm('service_hs3ygyf', 'template_7powc0q', this)
+    .then(function() {
+      alert('Message sent successfully!');
+    }, function(error) {
+      alert('Failed to send message: ' + error.text);
+    });
+});
 
 
 
