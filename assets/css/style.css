@@ -314,11 +314,68 @@ main {
   #SIDEBAR
 \*-----------------------------------*/
 
+
 .profile {
   border-radius: 15px;
   object-fit: cover;
 }
 
+.photos {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+
+/* Media query for phones (adjust this as necessary) */
+@media (max-width: 600px) {
+  .sidebar-info {
+    flex-direction: column; /* Stack name and photo vertically in phone mode */
+    align-items: center; /* Center align the content */
+  }
+
+  .name {
+    text-align: center; /* Center align the name on mobile */
+    margin-bottom: 15px; /* Adds space between name and profile photo */
+  }
+
+  .sidebar {
+    max-width: 100%;
+    padding: 15px;
+    max-height: none; /* Ensures the sidebar expands to fit all content */
+    overflow: visible;
+  }
+  
+  /* Adjust profile image size for mobile */
+  .profile {
+    width: 100%; /* Makes the profile image responsive */
+    max-width: 150px; /* Scales down the profile image */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image scales properly without being cut off */
+  }
+
+  .photos {
+    width: 100%; /* Makes the profile image responsive */
+    max-width: 300px; /* Scales down the profile image */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image scales properly without being cut off */
+  }
+  
+  /* Ensure the sidebar expands properly */
+  .sidebar.active {
+    max-height: 100%; /* Ensure it expands fully on mobile */
+  }
+
+  /* Ensure that links are displayed properly */
+  .contacts-list {
+    flex-direction: column;
+    align-items: center; /* Center align the contact information */
+  }
+  
+  .contact-item {
+    width: 100%; /* Ensure each item takes full width */
+    justify-content: center; /* Center the icons and text */
+  }
+}
 .sidebar {
   margin-bottom: 15px;
   max-height: 112px;
@@ -570,9 +627,17 @@ main {
 
 .photo-section {
   display: flex;
-  justify-content: center; /* Centers the images */
-  gap: 30px; /* Adjust this value to change the gap between the images */
-  margin: 30px 0; /* Adds some margin to separate it from the previous section */
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+/* Media query to stack photos on smaller screens */
+@media (max-width: 600px) {
+  .photo-section {
+    flex-direction: column;
+    align-items: center; /* Center the images in the column */
+  }
 }
 
 /**
