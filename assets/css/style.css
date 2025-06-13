@@ -871,15 +871,24 @@ span {
   line-height: 1.6;
 }
 
-.timeline-item:not(:last-child)::before {
+.timeline-item:not(:last-child)::before,
+.timeline-item:only-child::before {
   content: "";
   position: absolute;
   top: -25px;
   left: -30px;
   width: 1px;
-  height: calc(100% + 50px);
   background: var(--jet);
 }
+
+.timeline-item:not(:last-child)::before {
+  height: calc(100% + 50px);
+}
+
+.timeline-item:only-child::before {
+  height: 30px;
+}
+
 
 .timeline-item::after {
   content: "";
@@ -1468,7 +1477,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-list { margin-left: 65px; }
 
-  .timeline-item:not(:last-child)::before { left: -40px; }
+  .timeline-item:not(:last-child)::before,
+  .timeline-item:only-child::before { left: -40px; }
 
   .timeline-item::after {
     height: 8px;
