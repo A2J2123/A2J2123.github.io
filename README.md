@@ -7,10 +7,10 @@ This repository contains the source code for my personal website, built to serve
 
 ## 🗂️ Site Structure & Features
 
-- **Landing Page:** Brief introduction, hero image, and navigation links to key sections.
+- **Landing Page:** Brief introduction, profile image, and navigation links to key sections.
 - **About:** Personal and academic background, including a summary of interests and current studies.
 - **Portfolio/Projects:** Visual gallery of engineering and software projects, each with descriptions and photos. Images are served from `assets/images1/`.
-- **Experience:** Work history, co-ops, or internships, detailing roles and contributions.
+- **Experience:** Work history, co-ops, detailing roles and contributions.
 - **Resume:** Downloadable resume (PDF) or a web-based resume view.
 - **Contact:** Email and LinkedIn links for professional inquiries.
 
