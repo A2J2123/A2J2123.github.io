@@ -529,10 +529,6 @@
               <button data-filter-btn>Software</button>
             </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Mechanical</button>
-            </li>
-
           </ul>
 
           <div class="filter-select-box">
@@ -562,7 +558,7 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Mechanical</button>
+                <button data-select-item>Electrical</button>
               </li>
 
             </ul>
@@ -571,6 +567,21 @@
 
           <ul class="project-list">
 
+            <li class="project-item active" data-filter-item data-category="electrical">
+              <a href="https://github.com/A2J2123/LCOConverter-PCB.git" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images1/LCOConverter PCB 3D.png" alt="LCOConverter PCB" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">LCOConverter PCB </h3>
+                <p class="project-category">Electrical</p>
+              </a>
+            </li>
+            
             <li class="project-item active" data-filter-item data-category="software">
               <a href="https://github.com/A2J2123/SPICE-Netlist-Linter" target="_blank">
 
@@ -581,7 +592,7 @@
                   <img src="./assets/images1/LTSpice_Circuit.png" alt="SPICE Netlist Linter" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">SPICE Netlist Linter</h3>
+                <h3 class="project-title">SPICE Netlist Linter </h3>
                 <p class="project-category">Software</p>
               </a>
             </li>
@@ -597,7 +608,7 @@
                   <img src="./assets/images1/Compensator_and_Plant_Hardware.png" alt="Lead-Lag Compensator Design" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">MATLAB Lead-Lag Compensator Design</h3>
+                <h3 class="project-title">MATLAB Lead-Lag Compensator Design </h3>
 
                 <p class="project-category">Software</p>
 
@@ -694,7 +705,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="mechanical">
+            <li class="project-item  active" data-filter-item data-category="electrical">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -706,20 +717,73 @@
 
                 <h3 class="project-title">Creality Ender 6</h3>
 
-                <p class="project-category">Mechanical</p>
+                <p class="project-category">Electrical</p>
 
               </a>
             </li>
           </ul>
 
+          <p class="timeline-text">
+            *Right-click on project titles and select "Open link in new tab" to open project Github
+          </p>
+          <br>
 
-          <li class="project-item active" data-filter-item data-category="software" id="project1">
+          <li class="project-item active" data-filter-item data-category="electrical" id="project1">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
                   <img src="./assets/images1/idea.png" alt="project" width="25">
                 </div>
-                <h3 class="h3">SPICE Netlist Linter</h3>
+                <a href="https://github.com/A2J2123/LCOConverter-PCB" target="_blank" rel="noopener noreferrer" title="View on GitHub" style="margin-left:8px;">
+                  <h3 class="h3">LCOConverter PCB</h3>
+                </a>
+
+              </div>
+              <ol class="timeline-list">
+                <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title">What?</h4>
+                  <p class="timeline-text">
+                    • Designed a compact PCB that converts +5V input to a regulated +3.3V output using a MIC5317 low-dropout (LDO) voltage regulator.
+                  </p>
+                  <p class="timeline-text">
+                    • Features JST GH connectors for easy integration and 1uF ceramic capacitors for noise filtering and stability.
+                  </p>
+                </li>
+                <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title">How?</h4>
+                  <p class="timeline-text">
+                    • Created the schematic and PCB layout using ECAD tools, optimizing for minimal footprint and reliable power delivery.
+                  </p>
+                  <p class="timeline-text">
+                    • Incorporated supporting components (capacitors, connectors) and ensured proper grounding and trace routing for stable operation.
+                  </p>
+                </li>
+                <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title">Results</h4>
+                  <p class="timeline-text">
+                    • Delivered a reliable +3.3V power supply module for embedded or IoT projects, simplifying voltage level conversion from standard +5V sources.
+                  </p>
+                  <p class="timeline-text">
+                    • Facilitated plug-and-play usage in prototyping and final products, reducing design time and risk of voltage mismatches.
+                  </p>
+                </li>
+              </ol>
+            </section>
+            <section class="photo-section">
+              <img src="./assets/images1/LCOConverter PCB 3D.png" height="150" alt="LCOConverter-PCB Top View" class="profile">
+              <img src="./assets/images1/LCOConverter Schematic.png" height="150" alt="LCOConverter-PCB Schematic" class="profile">
+            </section>
+            </li>
+
+          <li class="project-item active" data-filter-item data-category="software" id="project2">
+            <section class="timeline">
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <img src="./assets/images1/idea.png" alt="project" width="25">
+                </div>
+                <a href="https://github.com/A2J2123/SPICE-Netlist-Linter" target="_blank" rel="noopener noreferrer" title="View on GitHub" style="margin-left:8px;">
+                  <h3 class="h3">SPICE Netlist Linter</h3>
+                </a>
               </div>
               <ol class="timeline-list">
                 <li class="timeline-item">
@@ -757,13 +821,15 @@
             </section>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="software" id="project2">
+          <li class="project-item  active" data-filter-item data-category="software" id="project3">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
                   <img src="./assets/images1/idea.png" alt="project" width="25">
                 </div>
-                <h3 class="h3">MATLAB Lead-Lag Compensator Design</h3>
+                <a href="https://github.com/A2J2123/MATLAB-Lead-Lag-Compensator-Design" target="_blank" rel="noopener noreferrer" title="View on GitHub" style="margin-left:8px;">
+                  <h3 class="h3">MATLAB Lead-Lag Compensator Design</h3>
+                </a>
               </div>
               <ol class="timeline-list">
                 <li class="timeline-item">
@@ -802,7 +868,7 @@
             </section>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="electrical" id="project3">
+          <li class="project-item  active" data-filter-item data-category="electrical" id="project4">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
@@ -852,13 +918,15 @@
             </section>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="electrical software" id="project4">
+          <li class="project-item  active" data-filter-item data-category="electrical software" id="project5">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
                   <img src="./assets/images1/idea.png" alt="project" width="25">
                 </div>
-                <h3 class="h3">Reservoir Simulation</h3>
+                <a href="https://github.com/A2J2123/ECE-298-Reservoir-Simulator" target="_blank" rel="noopener noreferrer" title="View on GitHub" style="margin-left:8px;">
+                  <h3 class="h3">Reservoir Simulation</h3>
+                </a>
               </div>
               <ol class="timeline-list">
                 <li class="timeline-item">
@@ -901,13 +969,15 @@
             </section>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="electrical software" id="project5">
+          <li class="project-item  active" data-filter-item data-category="electrical software" id="project6">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
                   <img src="./assets/images1/idea.png" alt="project" width="25">
                 </div>
-                <h3 class="h3">Acceleration Sensor</h3>
+                <a href="https://github.com/A2J2123/Baja-SAE-Accelerometer-Code" target="_blank" rel="noopener noreferrer" title="View on GitHub" style="margin-left:8px;">
+                  <h3 class="h3">Acceleration Sensor</h3>
+                </a>
               </div>
               <ol class="timeline-list">
                 <li class="timeline-item">
@@ -946,7 +1016,7 @@
             </section>
           </li>
 
-          <li class="project-item  active" data-filter-item data-category="electrical" id="project6">
+          <li class="project-item  active" data-filter-item data-category="electrical" id="project7">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
@@ -993,13 +1063,15 @@
             </section>
           </li>
           
-          <li class="project-item  active" data-filter-item data-category="electrical software" id="project7">
+          <li class="project-item  active" data-filter-item data-category="electrical software" id="project8">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
                   <img src="./assets/images1/idea.png" alt="project" width="25">
                 </div>
-                <h3 class="h3">Humidity Light Sensor</h3>
+                <a href="https://github.com/A2J2123/ECE-198-Environmental-Scanner" target="_blank" rel="noopener noreferrer" title="View on GitHub" style="margin-left:8px;">
+                  <h3 class="h3">Humidity Light Sensor</h3>
+                </a>
               </div>
               <ol class="timeline-list">
                 <li class="timeline-item">
@@ -1038,7 +1110,7 @@
           </li>
 
           
-          <li class="project-item  active" data-filter-item data-category="mechanical" id="project7">
+          <li class="project-item  active" data-filter-item data-category="electrical" id="project9">
             <section class="timeline">
               <div class="title-wrapper">
                 <div class="icon-box">
