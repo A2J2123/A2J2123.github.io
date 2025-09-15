@@ -15,7 +15,17 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 // Eye icon click event for scrolling
-const projectItems = document.querySelectorAll('.project-item a');
+const projectItems = document.querySelectorAll('.project-item > a:not(.repo-btn):not([target="_blank"])');
+
+projectItems.forEach((projectItem, index) => {
+  projectItem.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetSection = document.querySelector(`#project${index + 1}`);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 projectItems.forEach((projectItem, index) => {
   projectItem.addEventListener('click', function(event) {
     event.preventDefault();
